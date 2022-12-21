@@ -1,0 +1,176 @@
+/* universal selector */
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* paragraph text */
+p {
+    font-size: 16px;
+    padding: 10px;
+}
+
+/* text for navigation and footer links */
+a {
+    color: #76F185;
+    font-size: 20px;
+    display: inline;
+}
+
+/* largest part of site including 3 main sections */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+/* bar at the top of the page */
+.header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+/* text for name at top of page */
+.header h1 {
+    background-color: #76F185;
+    color: black;
+    display: inline-block;
+    font-size: 50px;
+    padding: 0px 10px 0px 50px;
+
+}
+
+/* links that take you to specific parts of the page */
+.header nav {
+    display: flex;
+    list-style: none;
+    /* text-align: right;
+    justify-content: flex-end; */
+    align-items: center;
+    margin: 0;
+}
+
+/* the way that the navigation links are aligned */
+li {
+    display: inline;
+    font-weight: bold;
+    font-size: 125%;
+}
+
+/* about me, work, and contact me */
+section {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    align-content: space-around;
+    flex-direction: row;
+}
+
+/* headers for section titles */
+h2 {
+    padding: 10px;
+    margin-right: 10px;
+    border-right: 5px solid black;
+    flex-shrink: 0;
+    flex-basis: 300px;
+}
+
+/* what happens when text with link changes when mouse is placed above it */
+a:hover {
+    text-shadow: 1px 1px 2px #D6AC8D;
+    text-decoration: none;
+}
+
+/* what happens when text with link is clicked on */
+a:active {
+    font-size: 90%;
+    text-decoration: none;
+}
+
+/* what happens when images in work section are hovered over and/or clicked on */
+img:hover,
+img:active {
+    size: 80%;
+    box-shadow: 5px 5px 2px #D6AC8D;
+}
+
+/* images in main section */
+section img {
+    max-width: 100%;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    border: 5px solid #76F185;
+    box-shadow: 5px 5px 10px;
+}
+
+/* size of all pictures in relation to section */
+.pictures {
+    width: 80%;
+}
+
+/* size of top image in work section in relation to the section */
+#top-image {
+    width: 100%;
+}
+
+.row-2,
+.row-3 {
+    width: 45%;
+    display: inline;
+}
+
+.row-2,
+.row-3 button {
+    background-color: #76F185;
+}
+
+.image-text {
+    position: absolute;
+    background-color: #76F185;
+    opacity: 0.5;
+    color: black;
+    bottom: 20px;
+    left: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.overlay {
+    position: absolute;
+    background-color: #76F185;
+    opacity: 0.5;
+    color: black;
+    bottom: 100px;
+    left: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: max-content;
+}
+
+.big-picture,
+.smaller-pics {
+    position: relative;
+}
+
+/* Adapts to smaller screens such as tablets */
+@media screen and (max-width: 992px) {
+    h2 {
+        flex-basis: 150px;
+    }
+}
+
+/* Adapts to smaller screen such as phones */
+@media screen and (max-width: 768px) {
+    section {
+        flex-direction: column;
+    }
+
+    h2 {
+        border-right: 0;
+        border-bottom: 5px solid black;
+    }
+}
