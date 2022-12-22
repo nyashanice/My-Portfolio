@@ -15,9 +15,13 @@ N/A
 
 To use and navigate my portfolio, you can use the navigation bar at the top to click on the desired section and you will be taken there. You may also click on the images in the "Work" section to be taken to the specific project that is shown. In the "Contact Me" section, you may click on my phone number, email, and/or GitHub link to be taken to your phone, email, or my GitHub repositories, respectively. 
 
+<img src="assets/images/screenshot.png">
+
 ## Credits
 
 Josh Comeau - reset.css file 
     Link: https://www.joshwcomeau.com/css/custom-css-reset/
 
+## Link
 
+To be directed to the deployed site <a href="https://nyashanice.github.io/My-Portfolio/">click here</a>
