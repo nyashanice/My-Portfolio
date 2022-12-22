@@ -14,18 +14,11 @@ p {
 a {
     color: #76F185;
     font-size: 20px;
-    display: inline;
-}
-
-/* largest part of site including 3 main sections */
-main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    /* display: inline; */
 }
 
 /* bar at the top of the page */
-.header {
+.heading {
     background-color: black;
     display: flex;
     justify-content: space-between;
@@ -33,7 +26,7 @@ main {
 }
 
 /* text for name at top of page */
-.header h1 {
+header h1 {
     background-color: #76F185;
     color: black;
     display: inline-block;
@@ -43,7 +36,7 @@ main {
 }
 
 /* links that take you to specific parts of the page */
-.header nav {
+.heading nav {
     display: flex;
     list-style: none;
     /* text-align: right;
@@ -57,6 +50,19 @@ li {
     display: inline;
     font-weight: bold;
     font-size: 125%;
+}
+
+/* big image under heading */
+.header-image {
+    width: 100%;
+    height: 600px;
+}
+
+/* largest part of site including 3 main sections */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 /* about me, work, and contact me */
@@ -90,43 +96,34 @@ a:active {
 }
 
 /* what happens when images in work section are hovered over and/or clicked on */
-img:hover,
-img:active {
+section img:hover,
+section img:active {
     size: 80%;
     box-shadow: 5px 5px 2px #D6AC8D;
 }
 
-/* images in main section */
-section img {
+/* size of all pictures in relation to work section */
+.pictures {
+    width: 80%;
+}
+
+/* large photo in work section */
+.big-picture {
+    position: relative;
+}
+
+/* large image in work section */
+.big-picture img {
     max-width: 100%;
     height: 300px;
     width: 300px;
     margin: 10px;
     border: 5px solid #76F185;
     box-shadow: 5px 5px 10px;
-}
-
-/* size of all pictures in relation to section */
-.pictures {
-    width: 80%;
-}
-
-/* size of top image in work section in relation to the section */
-#top-image {
     width: 100%;
 }
 
-.row-2,
-.row-3 {
-    width: 45%;
-    display: inline;
-}
-
-.row-2,
-.row-3 button {
-    background-color: #76F185;
-}
-
+/* overlay for big picture in work section */
 .image-text {
     position: absolute;
     background-color: #76F185;
@@ -138,39 +135,104 @@ section img {
     padding-right: 20px;
 }
 
+/* smaller images in work section as a whole unit */
+.smaller-pics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 
+}
+
+/* individual small images in work section and overlay text */
+.small {
+    width: 50%
+}
+
+/* individual smaller images in work section */
+.small img {
+    height: 300px;
+    width: 300px;
+    box-shadow: 5px 5px 10px;
+    margin: 5px;
+    flex-basis: 600px;
+}
+
+/* a tags over small images in work section */
+.small a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* text over small pictures in work section */
 .overlay {
     position: absolute;
     background-color: #76F185;
-    opacity: 0.5;
     color: black;
-    bottom: 100px;
+    bottom: 5%;
+    left: 5%;
+    /* bottom: 100px;
     left: 20px;
     padding-left: 20px;
-    padding-right: 20px;
-    width: max-content;
+    padding-right: 20px; */
+    /* width: max-content; */
 }
 
-.big-picture,
-.smaller-pics {
-    position: relative;
+.contact {
+    display: flex;
+}
+
+.contact div {
+    padding-top: 20px;
 }
 
 /* Adapts to smaller screens such as tablets */
 @media screen and (max-width: 992px) {
     h2 {
-        flex-basis: 150px;
+        flex-basis: 200px;
+        font-size: 40px;
     }
+
+    nav a {
+        font-size: 35px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+    h4 {
+        font-size: 25px;
+    }
+
+    .image-text p,
+    .overlay p {
+        font-size: 20px;
+    }
+
+    .small img {
+        flex-basis: 500px;
+    }
+
+    .overlay {
+        left: 3%;
+    }
+
+    .contact div {
+        padding-top: 50px;
+    }
+
 }
 
 /* Adapts to smaller screen such as phones */
 @media screen and (max-width: 768px) {
     section {
+        display: flex;
         flex-direction: column;
     }
 
-    h2 {
-        border-right: 0;
-        border-bottom: 5px solid black;
+    .contact div {
+        padding-top: 70px;
     }
 }
